@@ -97,7 +97,7 @@ job "redis" {
     # Further, setting "canary" equal to the count of the task group allows
     # blue/green deployments. When the job is updated, a full set of the new
     # version is deployed and upon promotion the old version is stopped.
-    canary = 1
+    canary = 0
   }
 
   # The migrate stanza specifies the group's strategy for migrating off of
@@ -142,7 +142,7 @@ job "redis" {
     # The "count" parameter specifies the number of the task groups that should
     # be running under this group. This value must be non-negative and defaults
     # to 1.
-    count = 3  
+    count = 2  
 
     # The "restart" stanza configures a group's behavior on task failure. If
     # left unspecified, a default restart policy is used based on the job type.
@@ -212,8 +212,8 @@ job "redis" {
       # are specific to each driver, so please see specific driver
       # documentation for more information.
       config {
-        #image = "redis:3.2"
-        image = "redis:4.0"
+        image = "redis:3.2"
+        #image = "redis:4.0"
         port_map {
           db = 6379
         }
