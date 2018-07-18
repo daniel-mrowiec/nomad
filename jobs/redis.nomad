@@ -97,7 +97,7 @@ job "redis" {
     # Further, setting "canary" equal to the count of the task group allows
     # blue/green deployments. When the job is updated, a full set of the new
     # version is deployed and upon promotion the old version is stopped.
-    canary = 0
+    canary = 3
   }
 
   # The migrate stanza specifies the group's strategy for migrating off of
@@ -212,8 +212,8 @@ job "redis" {
       # are specific to each driver, so please see specific driver
       # documentation for more information.
       config {
-        image = "redis:3.2"
-        #image = "redis:4.0"
+        #image = "redis:3.2"
+        image = "redis:4.0"
         port_map {
           db = 6379
         }
