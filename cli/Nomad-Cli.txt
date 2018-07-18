@@ -1,0 +1,24 @@
+https://github.com/hashi-demo/nomad.git
+
+
+--statusy
+nomad status redis
+nomad job deployments redis
+
+
+--historia
+
+nomad job history redis
+nomad job history -p redis
+nomad job history -full redis | more
+
+--revert
+nomad job revert redis 5
+
+
+--zatwierdzanie
+
+nomad status redis
+nomad deployment promote cd089505
+
+ 
