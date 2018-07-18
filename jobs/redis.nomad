@@ -212,8 +212,8 @@ job "redis" {
       # are specific to each driver, so please see specific driver
       # documentation for more information.
       config {
-        #image = "redis:3.2"
-        image = "redis:4.0"
+        image = "redis:3.2"
+        #image = "redis:4.0"
         port_map {
           db = 6379
         }
